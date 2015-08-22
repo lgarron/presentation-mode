@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Presentation Mode",
+  "description": "Brings back presentation mode on OSX from Chrome 45 and earlier.",
+  "version": "1.0.0",
+
+  "permissions": [
+    "windows"
+  ],
+
+  "background": {
+    "scripts": ["presentation-mode.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "fullscreen.png",
+    "default_title": "Presentation Mode"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Toggle presentation mode."
+    }
+  }
+}
