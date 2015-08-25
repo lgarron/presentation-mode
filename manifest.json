@@ -21,6 +21,9 @@
 
   "commands": {
     "_execute_browser_action": {
+      "description": "Toggle presentation mode."
+    },
+    "toggle": {
       "suggested_key": {
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"

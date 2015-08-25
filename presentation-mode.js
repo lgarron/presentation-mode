@@ -1,6 +1,6 @@
 "use strict";
 
-chrome.browserAction.onClicked.addListener(function () {
+function toggle() {
   chrome.windows.getCurrent(function (window) {
     if (window.state === "fullscreen") {
       chrome.windows.update(window.id, { state: "normal" });
@@ -8,4 +8,7 @@ chrome.browserAction.onClicked.addListener(function () {
       chrome.windows.update(window.id, { state: "fullscreen" });
     }
   });
-});
+}
+
+chrome.commands.onCommand.addListener(toggle);
+chrome.browserAction.onClicked.addListener(toggle);
